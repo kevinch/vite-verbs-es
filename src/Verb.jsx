@@ -35,6 +35,7 @@ export default function Verb() {
       <form onSubmit={handleSubmit}>
         <label>
           <input
+            autoFocus
             style={{ padding: "10px 20px", fontSize: "22px" }}
             type="text"
             value={filename}
@@ -49,7 +50,13 @@ export default function Verb() {
 
       {state.status === "success" && (
         <div>
-          <h1 style={{ fontWeight: "normal", fontSize: "4em", marginBottom: '14px' }}>
+          <h1
+            style={{
+              fontWeight: "normal",
+              fontSize: "4em",
+              marginBottom: "14px",
+            }}
+          >
             {state.data.word}
           </h1>
           <div>

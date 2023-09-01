@@ -2,14 +2,21 @@ function Infos() {
   return (
     <>
       <p style={{ margin: "100px 0 0 0", maxWidth: "800px" }}>
-        What is this?
-        <br />A simple <a href="https://vitejs.dev/" target="_blank">Vite-based</a> React app to load super fast spanish verbs
-        because I need this on a daily basis and got fed up with bloated sites.
-        Hosted at{" "}
+        What?
+        <br />A simple{" "}
+        <a href="https://vitejs.dev/" target="_blank">
+          Vite-based
+        </a>{" "}
+        React app to load super fast spanish verbs. Hosted at{" "}
         <a href="https://vercel.com/" target="_blank">
           Vercel
         </a>
         .
+        <br />
+        Why?
+        <br />
+        Because I need this on a daily basis and got fed up with bloated sites.
+        <br />
       </p>
       <p>
         Project by{" "}

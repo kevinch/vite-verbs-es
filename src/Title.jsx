@@ -1,5 +1,9 @@
 function Title() {
-    return (<h2>Vite Verbos ES</h2>)
+  return (
+    <div style={{margin: '50px 0'}}>
+      <h1 className="site-title">Spanish verbs</h1>
+    </div>
+  );
 }
 
-export default Title
+export default Title;

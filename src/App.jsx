@@ -1,23 +1,14 @@
-// import { useState } from "react";
-import "./App.css";
 import Title from "./Title.jsx";
 import Verb from "./Verb.jsx";
+import Infos from "./Infos.jsx";
+import "./App.css";
 
 function App() {
-//   const [open, setOpen] = useState(false);
-
   return (
     <>
       <Title />
-
-      <div className="card">
-        <div>
-          {/* <input /> */}
-          {/* <button onClick={() => !open && setOpen(true)}>Load</button> */}
-        </div>
-
-        <Verb />
-      </div>
+      <Verb />
+      <Infos />
     </>
   );
 }

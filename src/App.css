@@ -1,17 +1,11 @@
 #root {
-  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 0 2rem;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .site-title{
     text-transform: uppercase;
-    font-size: 2em;
-}
-
-.def {
-    color: #636363
+    font-size: 1.2em;
 }
 
 .person-label {

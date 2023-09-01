@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 
 function VerbTense({ data, title, isImperative }) {
   return (
-    <div style={{ padding: "0 16px" }}>
+    <div style={{ padding: "0 20px" }}>
       <div style={{ marginBottom: "20px" }}>{title}</div>
 
       <div style={{ fontWeight: "bold" }}>

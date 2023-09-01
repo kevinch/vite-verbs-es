@@ -39,20 +39,26 @@ export default function Verb() {
             type="text"
             value={filename}
             onChange={(e) => setFilename(e.target.value)}
+            placeholder="type & enter…"
           />
         </label>
       </form>
 
-      {state.status === "loading" && <div>Loading...</div>}
+      {state.status === "loading" && <div>Loading…</div>}
       {state.status === "error" && <div>Not found</div>}
+
       {state.status === "success" && (
         <div>
-          <h1 style={{ fontWeight: "normal" }}>{state.data.word}</h1>
+          <h1 style={{ fontWeight: "normal", fontSize: "4em", marginBottom: '14px' }}>
+            {state.data.word}
+          </h1>
           <div>
-            <span className="def">Infinitivo:</span> {state.data.infinitivo}{" "}
+            <span className="def">Infinitivo:</span>{" "}
+            <b>{state.data.infinitivo}</b> {" - "}
+            <span className="def">Gerundio:</span> <b>{state.data.gerundio}</b>{" "}
             {" - "}
-            <span className="def">Gerundio:</span> {state.data.gerundio} {" - "}
-            <span className="def">Participio:</span> {state.data.participio}
+            <span className="def">Participio:</span>{" "}
+            <b>{state.data.participio}</b>
           </div>
 
           <div className="tense-wrapper">

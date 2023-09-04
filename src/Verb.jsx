@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import ReactGA from "react-ga4";
 
 import TableFirstBloc from "./TableFirstBloc";
 import VerbTense from "./VerbTense";
 import Persons from "./Persons";
 
 export default function Verb() {
-  const [filename, setFilename] = React.useState("");
+  const [filename, setFilename] = useState("");
   const [state, setState] = useState({
     status: "idle",
     data: null,
@@ -28,6 +29,15 @@ export default function Verb() {
           setState({ status: "error", data: null, error });
         });
     }
+
+    ReactGA.event({
+        category: "form",
+        action: "input submit",
+        label: filename, // optional
+        // value: 99, // optional, must be a number
+        // nonInteraction: true, // optional, true/false
+        // transport: "xhr", // optional, beacon/xhr/image
+      });
   };
 
   return (

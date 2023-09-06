@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import ReactGA from "react-ga4";
 
 import TableFirstBloc from "./TableFirstBloc";
 import VerbTense from "./VerbTense";
@@ -30,17 +29,8 @@ export default function Verb() {
         });
     }
 
+    // Analytics via clicky.com
     clicky.log(window.location.href, filename, "input_submit")
-
-    // does not work
-    // ReactGA.event({
-    //     category: "form",
-    //     action: "input submit",
-    //     label: filename, // optional
-    //     // value: 99, // optional, must be a number
-    //     // nonInteraction: true, // optional, true/false
-    //     // transport: "xhr", // optional, beacon/xhr/image
-    //   });
   };
 
   return (

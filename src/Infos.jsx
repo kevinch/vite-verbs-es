@@ -7,7 +7,7 @@ function Infos() {
         <a href="https://vitejs.dev/" target="_blank">
           Vite-based
         </a>{" "}
-        React app to load super fast spanish verbs. Hosted at{" "}
+        React app to load super fast Spanish verbs. Hosted at{" "}
         <a href="https://vercel.com/" target="_blank">
           Vercel
         </a>

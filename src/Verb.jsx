@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReactGA from "react-ga4";
+// import ReactGA from "react-ga4";
 
 import TableFirstBloc from "./TableFirstBloc";
 import VerbTense from "./VerbTense";
@@ -30,14 +30,15 @@ export default function Verb() {
         });
     }
 
-    ReactGA.event({
-        category: "form",
-        action: "input submit",
-        label: filename, // optional
-        // value: 99, // optional, must be a number
-        // nonInteraction: true, // optional, true/false
-        // transport: "xhr", // optional, beacon/xhr/image
-      });
+    // does not work
+    // ReactGA.event({
+    //     category: "form",
+    //     action: "input submit",
+    //     label: filename, // optional
+    //     // value: 99, // optional, must be a number
+    //     // nonInteraction: true, // optional, true/false
+    //     // transport: "xhr", // optional, beacon/xhr/image
+    //   });
   };
 
   return (
@@ -130,9 +131,6 @@ export default function Verb() {
               <div style={{ color: "#666" }}>
                 <TableFirstBloc />
                 <Persons isImperative />
-                {/* {persons.map(
-                  (el, i) => i !== 0 && <div key={nanoid()}>{el}</div>
-                )} */}
               </div>
 
               <VerbTense

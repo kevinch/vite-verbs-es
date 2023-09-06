@@ -30,6 +30,8 @@ export default function Verb() {
         });
     }
 
+    clicky.log(window.location.href, filename, "input_submit")
+
     // does not work
     // ReactGA.event({
     //     category: "form",

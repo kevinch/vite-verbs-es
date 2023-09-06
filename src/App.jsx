@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
-
 import Title from "./Title.jsx";
 import Verb from "./Verb.jsx";
 import Infos from "./Infos.jsx";

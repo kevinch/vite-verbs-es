@@ -30,7 +30,7 @@ export default function Verb() {
     }
 
     // Analytics via clicky.com
-    clicky.log(window.location.href, filename, "input_submit")
+    clicky.log(window.location.pathname, filename, "input_submit")
   };
 
   return (

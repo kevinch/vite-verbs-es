@@ -15,12 +15,13 @@ export default function Verb() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const firstLetter = filename.split("")[0];
+    const cleanedFilename = filename.toLowerCase()
+    const firstLetter = cleanedFilename.split("")[0];
 
-    if (filename !== "") {
+    if (cleanedFilename !== "") {
       setState({ status: "loading", data: null, error: null });
 
-      import(`./verbos/${firstLetter}/${filename}@rae.json`)
+      import(`./verbos/${firstLetter}/${cleanedFilename}@rae.json`)
         .then((data) => {
           setState({ status: "success", data, error: null });
         })
@@ -30,7 +31,7 @@ export default function Verb() {
     }
 
     // Analytics via clicky.com
-    clicky.log(window.location.pathname, filename, "input_submit")
+    clicky.log(window.location.pathname, cleanedFilename, "input_submit")
   };
 
   return (
@@ -62,7 +63,7 @@ export default function Verb() {
           >
             {state.data.word}
           </h1>
-          <div>
+          <div className="base-tenses">
             <span className="def">Infinitivo:</span>{" "}
             <b>{state.data.infinitivo}</b> {" - "}
             <span className="def">Gerundio:</span> <b>{state.data.gerundio}</b>{" "}

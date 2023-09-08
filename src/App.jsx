@@ -6,7 +6,6 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Analytics />
       <Title />
       <Verb />
       <Infos />

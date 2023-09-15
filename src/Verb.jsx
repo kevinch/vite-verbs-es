@@ -16,7 +16,7 @@ export default function Verb() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const cleanedFilename = filename.toLowerCase()
+    const cleanedFilename = filename.toLowerCase();
     const firstLetter = cleanedFilename.split("")[0];
 
     if (cleanedFilename !== "") {
@@ -31,10 +31,12 @@ export default function Verb() {
         });
     }
 
-    // Analytics via mixpanel
-    mixpanel.track('Form submit', {
-        'word': cleanedFilename
-      })
+    if (window.location.hostname !== "localhost") {
+      // Analytics via mixpanel
+      mixpanel.track("Form submit", {
+        word: cleanedFilename,
+      });
+    }
   };
 
   return (

@@ -5,6 +5,8 @@ import TableFirstBloc from "./TableFirstBloc";
 import VerbTense from "./VerbTense";
 import Persons from "./Persons";
 
+const isProd = window.location.hostname !== "localhost";
+
 export default function Verb() {
   const [filename, setFilename] = useState("");
   const [state, setState] = useState({
@@ -24,15 +26,22 @@ export default function Verb() {
 
       import(`./verbos/${firstLetter}/${cleanedFilename}@rae.json`)
         .then((data) => {
+          isProd &&
+            mixpanel.track("Form reception", {
+              success: true,
+            });
           setState({ status: "success", data, error: null });
         })
         .catch((error) => {
+          isProd &&
+            mixpanel.track("Form reception", {
+              success: false,
+            });
           setState({ status: "error", data: null, error });
         });
     }
 
-    if (window.location.hostname !== "localhost") {
-      // Analytics via mixpanel
+    if (isProd) {
       mixpanel.track("Form submit", {
         word: cleanedFilename,
       });

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import mixpanel from "mixpanel-browser";
 
 import TableFirstBloc from "./TableFirstBloc";
 import VerbTense from "./VerbTense";
@@ -30,8 +31,10 @@ export default function Verb() {
         });
     }
 
-    // Analytics via clicky.com
-    clicky.log(window.location.pathname, cleanedFilename, "input_submit")
+    // Analytics via mixpanel
+    mixpanel.track('Form submit', {
+        'word': cleanedFilename
+      })
   };
 
   return (

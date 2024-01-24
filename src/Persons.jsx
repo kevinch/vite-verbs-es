@@ -1,4 +1,4 @@
-import { nanoid } from "nanoid";
+import { useId } from 'react';
 
 const persons = [
   "yo",
@@ -14,7 +14,7 @@ function Persons({ isImperative }) {
     return persons.map(
       (el, i) =>
         i !== 0 && (
-          <div style={{ textAlign: "right" }} key={nanoid()}>
+          <div style={{ textAlign: "right" }} key={useId()}>
             {el}
           </div>
         )
@@ -22,7 +22,7 @@ function Persons({ isImperative }) {
   }
 
   return persons.map((el, i) => (
-    <div style={{ textAlign: "right" }} key={nanoid()}>
+    <div style={{ textAlign: "right" }} key={useId()}>
       {el}
     </div>
   ));

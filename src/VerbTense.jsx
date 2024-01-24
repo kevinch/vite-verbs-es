@@ -1,4 +1,4 @@
-import { nanoid } from "nanoid";
+import { useId } from 'react';
 
 function VerbTense({ data, title, isImperative }) {
   return (
@@ -16,7 +16,7 @@ function VerbTense({ data, title, isImperative }) {
           </>
         ) : (
           data.map((el, i) => (
-            <div key={nanoid()}>
+            <div key={useId()}>
               <span>{el[0]}</span>
             </div>
           ))
